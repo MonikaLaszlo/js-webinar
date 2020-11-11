@@ -5,3 +5,10 @@
  * @returns {string[]} the list of the properties of the object
  *                     or empty array if it is not an object
  */
+
+
+const listKeys = o => { 
+    return (typeof o === 'object') ? Object.keys(o) : [];
+}
+
+module.exports = listKeys;
