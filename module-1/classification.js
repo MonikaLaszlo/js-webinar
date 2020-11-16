@@ -21,8 +21,35 @@ function grade(score) {
      * Also take into consideration the documentation of the function!
      */
     // PLACE YOUR CODE BETWEEN THIS...
-
+    /*
+        if (score < 0 || score > 100) {
+            gradeOfStudent = 0
+        } else if (score >= 90) {
+            gradeOfStudent = 5;
+        } else if (score >= 80) {
+            gradeOfStudent = 4;
+        } else if (score >= 70) {
+            gradeOfStudent = 3;
+        } else if (score >= 60) {
+            gradeOfStudent = 2;
+        } else {
+            gradeOfStudent = 1;
+        }
+    */
+    /*with ternary operator
+    gradeOfStudent = (score > 100 || score < 0) ? 0 : 
+        ((score >= 90) ? 5 : 
+        ((score >= 80) ? 4 : 
+        ((score >=70) ? 3 : 
+        ((score >= 60) ? 2 : 1))));
+    */
     // ...AND THIS COMMENT LINE!
-    return gradeOfStudent;
+    //  return gradeOfStudent;
+    
+    if (score < 0 || score > 100) {
+        return 0;
+    }
+    return Math.floor((Math.max(50, Math.min(99, score)) - 40) / 10);
+
 }
 module.exports = grade;
