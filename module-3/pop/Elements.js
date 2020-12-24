@@ -14,29 +14,27 @@
  *    by the locator (.get(n)) in it's context
  */
 
- const { element } = require('../test/mock/ElementFinder');
-const Element = require('./Element');
 
- class Elements extends Element{
-        constructor(name, locator){
-            super(name, locator);
+const Element = require("./Element");
 
-            this.children = null;
-        }
+class Elements extends Element {
+    constructor(name, locator) {
+        super(name, locator);
 
-        addChildren (){
-            throw new Error('Elements cannot have children');
-        }
+        this.children = null;
+    }
 
-        all(){
-            return element.all(this.locator);
-        }
+    addChildren() {
+        throw new Error('Elements cannot have children');
+    }
 
-        get(n){
-            return element.all(this.locator).get(n);
-        }
+    all() {
+        return element.all(this.locator);
+    }
 
-        
- }
+    get(n) {
+        return element.all().get(n);
+    }
+}
 
- module.exports = Elements;
+module.exports = Elements;

@@ -15,29 +15,24 @@
  *    the URL of it (.load())
  */
 
- const Element = require('./Element');
 
- class Layout extends Element{
-        constructor(name, url, locator){
-            super(name, locator);
-            this.url = url;
-        }
+const Element = require("./Element");
 
-        setParent(parent){
-            throw new Error('Layout cannot have parent');
-        }
+class Layout extends Element {
+    constructor(name, url, locator) {
+        super(name, locator);
+        this.url = url;
 
-        load(url){
-            return this.url;
-        }
+    }
 
-        addChildren(child){
-            super.addChildren(child);
-        }
+    setParent() {
+        throw new Error('Layout cannot have parent');
+    }
 
-        get(name){
-            return super.get(name);
-        }
- }
+    load() {
+        return browser.get(this.url);
+    }
 
- module.exports = Layout;
+    
+}
+module.exports = Layout;

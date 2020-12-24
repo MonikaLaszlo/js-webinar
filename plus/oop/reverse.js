@@ -7,10 +7,10 @@
  */
 
 const reverse = o => {
-    if (typeof o !== 'object') {
+    if (typeof o !== 'object'){
         throw new Error('o has to be an object');
     }
     return Object.fromEntries(Object.entries(o).map(([key, value]) => [value, key]));
-
+    
 }
-module.exports = reverse;
+module.exports = reverse;    

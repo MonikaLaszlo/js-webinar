@@ -16,7 +16,7 @@ describe("async / sleep", () => {
     it("should wait at most 10 seconds", async function () {
         this.timeout(TIMEOUT);
         const a = Date.now();
-        await sleep(15);
+        await sleep(10);
         const b = Date.now();
         expect(b - a).to.be.greaterThan(9900);
         expect(b - a).to.be.lessThan(10100);
