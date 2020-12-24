@@ -17,3 +17,9 @@ const sleep = sec => new Promise((resolve, reject) => {
 });
 
 module.exports = sleep;
+
+async () => {
+    console.log(1);
+    await Promise.race([sleep(5), sleep(4), Promise.reject('error')]);
+    console.log(2);
+}

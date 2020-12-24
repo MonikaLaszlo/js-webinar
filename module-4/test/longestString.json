@@ -14,5 +14,10 @@
     {
         "arguments": [[true, "hello", "world"]],
         "result": "hello"
+    },
+
+    {
+        "arguments": [[true]],
+        "result": ""
     }
 ]
