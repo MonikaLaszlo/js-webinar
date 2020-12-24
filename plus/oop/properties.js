@@ -6,9 +6,7 @@
  *                     or empty array if it is not an object
  */
 
+const properties = o => (typeof o === 'object') ? Object.keys(o) : [];
 
-const listKeys = o => { 
-    return (typeof o === 'object') ? Object.keys(o) : [];
-}
 
-module.exports = listKeys;
+module.exports = properties;

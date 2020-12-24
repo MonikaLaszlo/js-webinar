@@ -10,7 +10,7 @@
  class Circle {
      constructor(radius) {
          if (radius < 0){
-             throw new Error('r cannot be negative');
+             throw new Error('radius cannot be negative');
          }
          this.r = radius;
      }

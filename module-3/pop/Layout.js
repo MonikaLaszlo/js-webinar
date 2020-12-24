@@ -23,7 +23,6 @@ class Layout extends Element {
         super(name, locator);
         this.url = url;
 
-        this.children = {};
     }
 
     setParent() {
@@ -31,15 +30,9 @@ class Layout extends Element {
     }
 
     load() {
-        return this.url;
+        return browser.get(this.url);
     }
 
-    addChildren(child) {
-        super.addChildren(child);
-    }
-
-    get(name) {
-        return super.get(name);
-    }
+    
 }
 module.exports = Layout;
