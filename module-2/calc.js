@@ -1,5 +1,9 @@
 class Calc {
     constructor(v) {
+        if (typeof v !== 'number') {
+            throw new TypeError('v has to be a number');
+        }
+
         this.v = +v;
     }
 
@@ -48,7 +52,7 @@ function calc(n) {
     return new Calc(n);
 }
 
-module.exports = calc;
+module.exports = {calc, Calc};
 
 /*
 console.log(calc(3).v);
